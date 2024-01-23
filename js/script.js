@@ -15,7 +15,7 @@ const Recherche = async (e) => {
     }else {
         try {
             // const apiKey = "ab8d978ca1b77f58631a1c64bba45c20";
-            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${text_value.value}&appid=e5b5b2fa841bfd0541232807868d20ec&units=metric&lang=fr`;
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${text_value.value}&&appid=e5b5b2fa841bfd0541232807868d20ec&units=metric&lang=fr`;
             // Définition de l'URL de l'API en utilisant la clé d'API et la requête pour New York
             
             const response = await fetch(apiUrl);
@@ -35,10 +35,12 @@ const Recherche = async (e) => {
                     <p class="meteo"><strong>Température</strong> : <span>${data.main.temp} °c</span></p>
                     <p class="pays"><strong>Humidité</strong> : <span>${data.main.humidity} %</span></p>
                     <p class="pays"><strong>Vent</strong> : <span>${data.wind.speed} km/h</span></p>
+                    <p class="pays"><strong>description</strong> : <span>${data.weather[0].description}</span></p>
+
 
                 </div> 
             `
-
+            
             main.style = "margin-top: 3%; "
         } catch (err) {
             console.log("ERREUR" + err);
