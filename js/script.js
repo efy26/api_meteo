@@ -24,14 +24,12 @@ const Recherche = async (e) => {
             const data = await response.json();
             // Conversion de la réponse en format JSON et stockage dans la variable data
             
-            console.log(data);
-            // Affichage des données obtenues dans la console
 
             main.innerHTML = 
             ` 
                 <div class="container">
-                    <p class="continant"><strong>Initial</strong> : <span>${data.sys.country}</span></p>
-                    <p class="pays"><strong>Pays</strong> : <span>${data.name}</span></p>
+                    <p class="continant"><strong>Initial pays / ville</strong> : <span>${data.sys.country}</span></p>
+                    <p class="pays"><strong>Pays / Ville</strong> : <span>${data.name}</span></p>
                     <p class="meteo"><strong>Température</strong> : <span>${data.main.temp} °c</span></p>
                     <p class="pays"><strong>Humidité</strong> : <span>${data.main.humidity} %</span></p>
                     <p class="pays"><strong>Vent</strong> : <span>${data.wind.speed} km/h</span></p>
