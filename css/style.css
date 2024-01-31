@@ -54,16 +54,45 @@ form input:last-child {
     display: flex;
     justify-content: center;
     margin-top: 20%;
-    transition: 2s all;
+    transition: 0.5s all;
 }
 .main .container {
     display: grid;
     /* justify-content: center; */
-    line-height: 40px;
-    width: 55%;
+    line-height: 20px;
+    width: 65%;
     height: auto;
     padding: 3%;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
 
+
 }
+.main .container p{
+    margin: 3%;
+
+
+}
+
+.aside {
+    display: flex;
+    justify-content: center;
+}
+.aside .container {
+    background-color: rgb(255, 255, 255);
+    width: 65%;
+    height: auto;
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 5px;
+}
+.aside .container p a{
+ text-decoration: none;
+ font-weight: bold;
+ color: black;
+ transition: 0.3s all;
+}
+.aside .container p a:hover{
+    text-decoration:underline dashed;
+    color: rgb(180, 180, 180);
+   }
